@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTaskStatus = document.getElementById('modal-task-status');
     const modalTaskTeam = document.getElementById('modal-task-team');
     const modalTaskMembers = document.getElementById('modal-task-members');
-
     const modalContent = document.querySelector('.modal-content');
 
     bubbles.forEach(bubble => {
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTaskTeam.textContent = '';
             modalTaskMembers.textContent = '';
 
-            modalContent.classList.remove('sales-modal', 'logistics-modal', 'operations-modal', 'rnd-modal', 'social-media-modal', 'tech-modal');
+            modalContent.classList.remove('sales-modal', 'logistics-modal', 'operations-modal', 'research-and-development-modal', 'social-media-modal', 'tech-modal');
 
             // Populate the modal with the selected bubble's data
             const task = JSON.parse(bubble.getAttribute('data-task'));

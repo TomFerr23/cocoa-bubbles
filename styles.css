@@ -20,6 +20,7 @@ body {
     position: relative;
 }
 
+/* Base bubble sizes */
 .bubble {
     display: flex;
     align-items: center;
@@ -63,16 +64,43 @@ body {
 .social-media { background-image: url('images/social_media.svg'); }
 .tech { background-image: url('images/tech.svg'); }
 
-/* Adjusted sizes */
+/* Default sizes for desktop */
 .small { width: 120px; height: 120px; font-size: 12px; }
 .medium { width: 160px; height: 160px; font-size: 14px; }
 .large { width: 200px; height: 200px; font-size: 16px; }
 .xlarge { width: 240px; height: 240px; font-size: 18px; }
 .xxlarge { width: 280px; height: 280px; font-size: 20px; }
 
-body.modal-open .bubble {
-    display: block; /* Ensure bubbles are visible even when the modal is open */
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .small { width: 100px; height: 100px; font-size: 10px; }
+    .medium { width: 130px; height: 130px; font-size: 12px; }
+    .large { width: 160px; height: 160px; font-size: 14px; }
+    .xlarge { width: 190px; height: 190px; font-size: 16px; }
+    .xxlarge { width: 220px; height: 220px; font-size: 18px; }
 }
+
+@media (max-width: 768px) {
+    .small { width: 80px; height: 80px; font-size: 8px; }
+    .medium { width: 100px; height: 100px; font-size: 10px; }
+    .large { width: 130px; height: 130px; font-size: 12px; }
+    .xlarge { width: 160px; height: 160px; font-size: 14px; }
+    .xxlarge { width: 190px; height: 190px; font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    .small { width: 60px; height: 60px; font-size: 6px; }
+    .medium { width: 80px; height: 80px; font-size: 8px; }
+    .large { width: 100px; height: 100px; font-size: 10px; }
+    .xlarge { width: 120px; height: 120px; font-size: 12px; }
+    .xxlarge { width: 140px; height: 140px; font-size: 14px; }
+}
+
+/* Ensure bubbles are visible even when the modal is open */
+body.modal-open .bubble {
+    display: block; 
+}
+
 
 /* Modal styling */
 .modal {
