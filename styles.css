@@ -59,7 +59,7 @@ body {
 .sales { background-image: url('images/sales.svg'); }
 .logistics { background-image: url('images/logistics.svg'); }
 .operations { background-image: url('images/operations.svg'); }
-.rnd { background-image: url('images/rnd.svg'); }
+.research-and-development { background-image: url('images/rnd.svg'); }
 .social-media { background-image: url('images/social_media.svg'); }
 .tech { background-image: url('images/tech.svg'); }
 
@@ -129,78 +129,96 @@ body.modal-open .bubble {
 }
 
 .modal-content p {
-    margin: 10px 0; /* Add proper spacing between elements */
-    font-family: 'GothamBold', sans-serif; /* Ensure GothamBold is used */
-}
-
-.modal-content p strong {
-    text-transform: uppercase;
-    font-family: 'GothamBold', sans-serif; /* Ensure GothamBold is used */
-    font-weight: bold;
-}
-
-.modal-content p span {
-    font-family: 'GothamBold', sans-serif; /* Ensure GothamBold is used */
-    color: #555;
-}
-
-/* Add proper spacing between each label and its corresponding value */
-.modal-content p {
+    margin: 0; /* Remove default margin */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px; /* Add spacing between each pair */
+    font-family: 'GothamBold', sans-serif;
 }
 
-.modal-content p strong {
-    margin-right: 10px; /* Add space between label and value */
+.modal-content .modal-row {
+    padding: 16px;
+    padding-top: 24px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
 }
 
-.modal-content p span {
+.modal-content .modal-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.modal-content .modal-row:nth-child(odd) {
+    background-color: #fff;
+}
+
+.modal-content .modal-row strong {
+    text-transform: uppercase;
+    font-family: 'GothamBold', sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.modal-content .modal-row span {
+    font-family: 'GothamBold', sans-serif;
+    color: #555;
     flex-grow: 1;
     text-align: right;
 }
 
+/* Icon alignment */
+.modal-content .modal-row i {
+    margin-right: 10px;
+    margin-top: -12px;
+    vertical-align: middle; /* Ensures icons align with text */
+}
+
 /* Dynamic Classes for Modal Styling Based on Category */
 .sales-modal {
-    color: #FFC20E; /* Example color for sales category */
+    color: #FFC20E !important; 
 }
 
 .logistics-modal {
-    color: #0D9C4A; /* Example color for logistics category */
+    color: #0D9C4A !important; 
 }
 
 .operations-modal {
-    color: #F26539; /* Example color for operations category */
+    color: #F26539 !important; 
 }
 
-.rnd-modal {
-    color: #00A2A2; /* Example color for R&D category */
+.research-and-development-modal {
+    color: #00A2A2 !important; 
 }
 
 .social-media-modal {
-    color: #E671AB; /* Example color for social media category */
+    color: #E671AB !important; 
 }
 
 .tech-modal {
-    color: #0047AB; /* Example color for tech category */
+    color: #0047AB !important; 
 }
 
-/* Optional: Background color for different sections */
-.sales-modal p,
-.logistics-modal p,
-.operations-modal p,
-.rnd-modal p,
-.social-media-modal p,
-.tech-modal p {
-    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
-    padding: 10px;
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    padding-top: 24px;
     border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
+.modal-row p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
 
-
-
-
-
+.modal-row span {
+    margin-left: auto;
+    text-align: right;
+}
 

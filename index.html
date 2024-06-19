@@ -6,6 +6,7 @@
     <title>Task Bubbles</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/zve0fzf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Bubbles -->
@@ -27,7 +28,7 @@
             <div class="due-date">Due Date: 30/05</div>
         </div>
     </div>
-    <div class="bubble rnd xlarge" data-task='{"name": "Prototype Testing", "category": "R&D", "startDate": "01/05", "deadline": "01/06", "status": "In Progress", "team": "R&D Team", "members": ["Joey", "Jev"]}'>
+    <div class="bubble research-and-development xlarge" data-task='{"name": "Prototype Testing", "category": "Research and Development", "startDate": "01/05", "deadline": "01/06", "status": "In Progress", "team": "R&D Team", "members": ["Joey", "Jev"]}'>
         <div class="bubble-content">
             <div class="task-name">Prototype Testing</div>
             <div class="due-date">Due Date: 01/06</div>
@@ -63,7 +64,7 @@
             <div class="due-date">Due Date: 06/06</div>
         </div>
     </div>
-    <div class="bubble rnd large" data-task='{"name": "Research Analysis", "category": "R&D", "startDate": "15/05", "deadline": "07/06", "status": "In Progress", "team": "R&D Team", "members": ["Joey", "Isabella"]}'>
+    <div class="bubble research-and-development large" data-task='{"name": "Research Analysis", "category": "Research and Development", "startDate": "15/05", "deadline": "07/06", "status": "In Progress", "team": "R&D Team", "members": ["Joey", "Isabella"]}'>
         <div class="bubble-content">
             <div class="task-name">Research Analysis</div>
             <div class="due-date">Due Date: 07/06</div>
@@ -105,14 +106,27 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modal-task-name" class="modal-task-name"></h2>
-            <p class="modal-category"><strong>Category:</strong> <span id="modal-task-category"></span></p>
-            <p class="modal-start-date"><strong>Start Date:</strong> <span id="modal-task-start-date"></span></p>
-            <p class="modal-deadline"><strong>Deadline:</strong> <span id="modal-task-deadline"></span></p>
-            <p class="modal-status"><strong>Status:</strong> <span id="modal-task-status"></span></p>
-            <p class="modal-team"><strong>Team:</strong> <span id="modal-task-team"></span></p>
-            <p class="modal-members"><strong>Members:</strong> <span id="modal-task-members"></span></p>
+            <div class="modal-row modal-category">
+                <p><i class="fas fa-tags"></i> <strong>Category:</strong> <span id="modal-task-category"></span></p>
+            </div>
+            <div class="modal-row modal-start-date">
+                <p><i class="fas fa-calendar-alt"></i> <strong>Start Date:</strong> <span id="modal-task-start-date"></span></p>
+            </div>
+            <div class="modal-row modal-deadline">
+                <p><i class="fas fa-hourglass-half"></i> <strong>Deadline:</strong> <span id="modal-task-deadline"></span></p>
+            </div>
+            <div class="modal-row modal-status">
+                <p><i class="fas fa-tasks"></i> <strong>Status:</strong> <span id="modal-task-status"></span></p>
+            </div>
+            <div class="modal-row modal-team">
+                <p><i class="fas fa-users"></i> <strong>Team:</strong> <span id="modal-task-team"></span></p>
+            </div>
+            <div class="modal-row modal-members">
+                <p><i class="fas fa-user-friends"></i> <strong>Members:</strong> <span id="modal-task-members"></span></p>
+            </div>
         </div>
     </div>
+    
 
     <script src="script.js"></script>
 </body>
